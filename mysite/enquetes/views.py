@@ -17,6 +17,11 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Question
     template_name = "enquetes/detail.html"
+    def get_queryset(self):
+        """
+        Exclui quaisquer perguntas que ainda não tenham sido publicadas.
+        """
+        return Question.objects.filter(pub_date__lte=timezone.now())
 
 
 class ResultsView(generic.DetailView):
