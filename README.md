@@ -1,2 +1,2 @@
-# Web config with django
+# Web config with django in wiki
 
