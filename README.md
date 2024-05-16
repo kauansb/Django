@@ -1,2 +1,2 @@
-# Web projects with django
+# Web config with django
 
